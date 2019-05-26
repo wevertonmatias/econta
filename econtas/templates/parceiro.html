@@ -1,0 +1,110 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %} ">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %} ">
+</head>
+
+<body>
+        
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <img id="minhalogo" src="{% static 'img/images.png'%} ">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'quem_somos' %}">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contato' %}">Contato</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'parceiro' %} ">Parceiros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'acessar_conta'%}">Acessar Conta</a>
+            </li>
+             <li class="nav-item">
+               <a class="nav-link" href="facebook">
+                   <i class="fab fa-facebook-square"></i></a>
+            </li>
+            
+        </ul>
+      <ion-icon name="logo-facebook" src="img/facebook.svg"></ion-icon>
+    </div>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    </nav>
+
+
+</header>
+       
+<div class="container border">
+    <div class="h2 text-center">
+        <label>Nossos Parceiros</label>
+    </div>
+    <div class="row">
+        
+        <div class="col-sm-3">   
+            <div class="card" >
+                <img src="img/josecalcados.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">José Calçados</h5>
+                <p class="card-text">Uma empresa que fornece os melhores calçados da região</p>
+                <a href="#" class="btn btn-primary">Visite o Site</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" >
+                <img src="" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" >
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+            
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+    
+<script type="script"  src="{% static 'js/jquery-3.4.1.min.js' %} "></script>
+<script type="script"  src="{% static 'js/bootstrap.min.js' %} "></script>
+<script type="script"  src="{% static 'js/ionicons.js' %} "></script>
+</body>
+</html>                                             

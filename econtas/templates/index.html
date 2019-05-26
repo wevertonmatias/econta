@@ -1,0 +1,126 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %} ">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %} ">
+</head>
+
+<body>
+        
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img id="minhalogo" src="{% static 'img/images.png'%} ">
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'quem_somos' %}">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contato' %}">Contato</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'parceiro' %} ">Parceiros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'acessar_conta'%}">Acessar Conta</a>
+            </li>
+                <li class="nav-item">
+                <a class="nav-link" href="facebook">
+                <i class="fab fa-facebook-square"></i></a>
+            </li>
+            
+        </ul>
+      <ion-icon name="logo-facebook" src="img/facebook.svg"></ion-icon>
+    </div>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    </nav>
+
+
+</header>
+       
+<div class="container">
+    <div id="carouselSite" class="carousel slide" data-ride="carousel">
+                
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                    <img class="d-block img-fluid" src="{% static 'img/banner1.jpg' %}" alt="Primeiro slide">
+                    <div class="carousel-caption d-nome d-lg-block">
+                    <h4>Primeiro slide</h4>
+                    <p>Conteúdo lá e pá, todas essas paradas</p>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+            <img class="d-block img-fluid" src="{% static 'img/banner4.png' %}" alt="Segundo slide">
+            <div class="carousel-caption d-nome d-lg-block">
+                <h4>Segundo slide</h4>
+                <p>Conteúdo lá e pá, todas essas paradas</p>
+                </div>
+                </div>
+                <div class="carousel-item">
+                <img class="d-block img-fluid" src="{% static 'img/banner5.png' %}" alt="Terceiro slide">
+                <div class="carousel-caption d-nome d-lg-block">
+                    <h4>terceiro slide</h4>
+                    <p>Conteúdo lá e pá, todas essas paradas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer>
+        <div class="footer-top bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12 segment-one">
+                        <h3>e-Contas</h3>
+                        <p>Minions ipsum poulet tikka masala ti aamoo! Wiiiii chasy. Belloo! wiiiii abelha fazer abelha fazer potatoooo. Aaaaaah bunda wiiiii bananaaaa poopayee uuuhhh. Abelha fazer abelha fazer underweaaar poulet tikka masala jiji hahaha abelha fazer abelha fazer wiiiii daa. Po kas poopayee poopayee bunda aaaaaah uuuhhh pepete baboiii tulaliloo ti aamoo! Aaaaaah Poopayee bappleees abelha fazer abelha fazer abelha me uuuhhh quero bananaaa! Potatoooo</p>
+                    </div><div class="col-md-3 col-sm-6 col-xs-12 segment-two">
+                        <h2>e-Contas</h2>
+                        <ul>
+                            <li class="border-bottom"><a href="#">Evento</a></li>
+                            <li class="border-bottom"><a href="#">suporte</a></li>
+                            <li class="border-bottom"><a href="#">Hospedagem</a></li>
+                            <li class="border-bottom"><a href="#">Carreira</a></li>
+                            <li class="border-bottom"><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 segment-three">
+                        <h2>FOLLOW US</h2>
+                        <p>Please follow us our Social Media Profile in order to keep update.</p>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 segment-four">
+                        <h2>Nosso boletim informativo</h2>
+                        <p>Please follow us our Social Media Profile in order to keep update. Minions ipsum dolor sit amet, consectetur adipisicing elit. EX, libero.</p>
+                        <form action="">
+                            <input type="email">
+                            <input type="submit" value="GO">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom-text">All Right reserve by &copy; e-Contas.2019</p>
+    </footer>
+ 
+<script type="script"  src="{% static 'js/jquery-3.4.1.min.js' %} "></script>
+<script type="script"  src="{% static 'js/bootstrap.min.js' %} "></script>
+<script type="script"  src="{% static 'js/ionicons.js' %} "></script>
+</body>
+</html>                                             

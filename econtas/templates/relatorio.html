@@ -1,0 +1,187 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Home-CompreAqui</title>
+    <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %} ">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %} ">
+    
+</head>
+<body>
+
+      
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <img id="minhalogo" src="{% static 'img/images.png'%} ">
+        <ul class="navbar-nav auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html">Relatórios</a>
+            </li>
+        </ul>
+      
+    </div>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+    </button>
+    </nav>
+
+
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-3 border">
+            <div class="form-group row p-2">
+            <p class="h3 text-center">Painel Gerenciador</p>
+            </div>
+            <div class="h4 p-2">
+                    <div class="form-group row">
+                        <label>Empresa</label>
+                        <select class=form-control>
+                            <option value="0">Selecione uma Empresa</option>
+                            <option value="1">Jose Calçados</option>
+                            <option value="2">Maria Confecções</option>
+                            <option value="3">Benedita Lanches</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group row">
+                        <laberl>Mês</laberl>
+                        <select class="form-control">
+                            <option value="0">Selecione um mês</option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Fevereiro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
+                    </div>
+                    <div class="form-group row">
+                        <label>Categoria</label>
+                        <select class="form-control">
+                            <option value="0">Selecione uma Categoria</option>
+                            <option value="1">Alimentação</option>
+                            <option value="2">Segurança</option>
+                            <option value="3">Limpeza
+                        </select>
+                    </div>
+                
+                    <div class="form-group row">
+                        <label>Valor</label>
+                    </div>
+                
+                    <div class="form-group row">
+                        <input class="form-control" type="number" id="valorMin" placeholder="Valor Minimo" mim="1">
+                    </div>
+                    <div class="form-group row">
+                        <input class="form-control" type="number" id="valorMax" placeholder="Valor Máximo">
+                    </div>
+                    
+                    <div class="form-group row">
+                        <button type="button" class="btn btn-dark">Pesquisar</button>
+                    </div>
+                    
+            </div>
+
+        </div>
+
+        <div class="col-md-3 col-lg-2">
+            <ul class="list-group">
+                <label class="h5">Categoria</label>
+                <li class="list-group-item justify-content-between align-items-center">
+                    <span>Energia</span>
+                    
+                    <span id="valor" class="badge badge-dark badge-pill"><span>R$</span>150,00</span>
+                </li>
+                
+                <li class="list-group-item justify-content-between align-items-center">
+                    Segurança
+                    <span id="valor" class="badge badge-dark badge-pill"><span>R$</span>250,00</span>
+                </li>
+                
+                <li class="list-group-item justify-content-between align-items-center">
+                    Alimentação
+                
+                    <span id="valor" class="badge badge-dark badge-pill"><span>R$</span>300,00</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-sm-12 col-md-5 col-lg-7 border">
+            <div class="table-responsive-sm">
+                <table class="table table-responsive table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Empresa</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Vencimento</th>
+                            <th scope="col">Data Pagamento</th>
+                            <th scope="col">Valor R$</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <th scope="col"></th>
+                        <td>Valor Total</td>
+                        <td>R$</td>
+                        <td>1.110,00</td>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Jose Calçados</td>
+                            <td>Equatorial Nº2540</td>
+                            <td>Energia</td>
+                            <td>01/02/2019</td>
+                            <td>03/02/2019</td>
+                            <td>850,00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                                <td>Jose Calçados</td>
+                                <td>Fatura oi 8233254679</td>
+                                <td>Telefone</td>
+                                <td>10/02/2019</td>
+                                <td>16/02/2019</td>
+                                <td>180,00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Jose Calçados</td>
+                            <td>Boleto Nº1212313</td>
+                            <td>Internet</td>
+                            <td>15/02/2019</td>
+                            <td>20/02/2019</td>
+                            <td>80,00</td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>      
+    </div>
+
+<script type="script"  src="{% static 'js/jquery-3.4.1.min.js' %} "></script>
+<script type="script"  src="{% static 'js/bootstrap.min.js' %} "></script>
+<script type="script"  src="{% static 'js/ionicons.js' %} "></script>
+
+</body>
+
+
+</html>

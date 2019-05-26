@@ -1,0 +1,73 @@
+{% load static %}
+
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %} ">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %} ">
+</head>
+
+<body>
+        
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <img id="minhalogo" src="{% static 'img/images.png'%} ">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'quem_somos' %}">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contato' %}">Contato</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'parceiro' %} ">Parceiros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link actice" href="{% url 'acessar_conta'%}">Acessar Conta</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="facebook">
+                   <i class="fab fa-facebook-square"></i></a>
+            </li>
+        </ul>
+   
+    </div>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+    </button>
+    </nav>
+
+
+</header>
+       
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="form_login">Login</label>
+            <input id="form_login" type="text" class="form-control" autofocus>
+        </div>
+        <div class="form-group">
+            <label for="form_senha">Senha</label>
+            <input id="form_senha" type="text" class="form-control">
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="id_check">
+            <label for="id_check" class="form-check-label">Permanecer Logado</label>
+        </div>
+        <a class="btn btn-dark float-right" href="{% url 'relatorio' %}">Acessar</a>
+    </form>   
+
+</div>
+<script type="script"  src="{% static 'js/jquery-3.4.1.min.js' %} "></script>
+<script type="script"  src="{% static 'js/bootstrap.min.js' %} "></script>
+<script type="script"  src="{% static 'js/ionicons.js' %} "></script>
+</body>
+</html>  
