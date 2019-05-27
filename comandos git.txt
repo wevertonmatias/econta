@@ -1,0 +1,56 @@
+git init -> inicia a pasta para ter suporte ao git
+
+git init --bare  -> inicia a pasta para ter suporte ao git com mais funcionalidades
+
+git status -> para ver os status dos arquivos localmente
+
+git add 'nome do arquivo' -> para adicionar a lista de vigia do git
+git add . -> adiciona todos os arquivos
+
+git commit -m 'descrever algo sobre o commit' -> adiciona a lista de arquivos que
+seram enviados ao servidor.
+
+git clone 'nome do local, seja em local host ou web' -> para clonar um repositorio
+
+git push origin 'nome do branch' -> para enviar o código local para o servidor,
+do seu branch local para o servidor.
+
+git pull  -> mostras as coisas que estão no servidor e não esta atualizada localmente
+git pull origin 'nome do branch' -> para baixar o branch que esta no servidor
+em alguns o comando git status não irá mostrar o novo branch 
+é preciso acessar o branch com git ckeckout para que depois ele seja listado no
+git status.
+"OBS esse git pull é diferente do git clone
+o git clone irá iniciar todo o diretorio
+e o git pull apenas vai atualizar as coisas que estão
+desatualizadas"
+
+
+git branch -D 'nome do branch' -> para excluir o merguim, deve fazer o git pull.
+
+git merge 'nome do branch' -> para puchar de um branch para o outro o codigo, 
+deve esta no branch que deseja puchar o código do servidor.
+
+git branch -> para listar os branch dispoveis do servidor e em qual branch está.
+
+git branch 'nome do branc' -> para criar o branc localmente,
+deve usar o git push 'o branch master' para enviar ao servidor esse novo branch 
+
+git checkout 'nome do branch' -> acessar o branch 
+
+git remote -v -> mostra quais os locais remotos tamos mandando nosso código no momento,
+seja local ou web
+
+git remote add 'nome do origim' 'local qual iremos enviar os arquivos' -> serve para
+termos vario locais de envio do nosso código local ou na web
+
+git push -u 'nome do origim' 'nome do branch' -> server para mandar o branch para a origim,
+que pode ser local ou web
+
+git remote remove 'nome da remote' -> remove a remote, isso não apaga do servidor,
+apenas apaga o caminho local.
+
+git push -u 'nome do origin' 'nome do branch' -> para mandar o branch para o origin
+usamos quando criamos um projeto localmente e vamos fazer o upload dele
+
+git remote add 'nome da origin' 'nome do caminho remoto' - para especificar que a origin é remota
