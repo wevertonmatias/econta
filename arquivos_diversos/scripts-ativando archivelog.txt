@@ -1,0 +1,17 @@
+$ sqlplus / as sysdba;
+
+select log_mode from v$database;
+
+show parameter pfile;
+
+alter system set log_archive_dest_1='location=E:\Weverton\ADS_FACUL\PROJ_2019_1\TableSpaces\logs' scope=spfile;
+
+shutdown immediate;
+
+startup mount;
+
+alter database archivelog;
+
+alter database open;
+
+alter system switch logfile;

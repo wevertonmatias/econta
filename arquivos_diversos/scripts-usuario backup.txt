@@ -1,0 +1,11 @@
+CREATE USER restaure IDENTIFIED BY "123"
+DEFAULT TABLESPACE tbs_proj; 
+create role backups;
+grant alter session to restaure;
+grant backups to restaure;
+
+grant
+BACKUP ANY TABLE,
+CREATE SESSION,
+RECOVERY_CATALOG_OWNER
+to backups;

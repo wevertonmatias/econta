@@ -1,0 +1,14 @@
+CREATE USER consultas IDENTIFIED BY "123"
+DEFAULT TABLESPACE tbs_proj; 
+create role consultor ;
+grant alter session to restaure;
+grant consultor to consultas;
+
+
+grant
+CREATE SESSION
+to consultor;
+
+grant
+GRANT SELECT ANY TABLE TO "CONSULTAS" tds_proj 
+to consultor;

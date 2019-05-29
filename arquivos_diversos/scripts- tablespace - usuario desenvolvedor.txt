@@ -1,0 +1,15 @@
+create tablespace tbs_proj
+datafile 'E:\Weverton\ADS_FACUL\PROJ_2019_1\TableSpaces\tbd_proj.dbf' size 100M
+autoextend on next 10M maxsize 200M
+online;
+
+CREATE USER desenvolvedor IDENTIFIED BY "123"
+DEFAULT TABLESPACE tbs_proj;  
+
+grant alter session to desenvolvedor;
+grant create trigger to desenvolvedor;
+
+grant perfil_desenv to desenvolvedor;
+
+grant unlimited tablespace to desenvolvedor;
+
