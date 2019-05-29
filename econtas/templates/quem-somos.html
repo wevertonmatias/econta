@@ -46,6 +46,44 @@
 
 
 </header>
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        
+    </head>
+    <body>
+        <h5 class="laranja">Quem Somos</h5>
+        <h1 class="laranja-pera">O e-Contas lhe Ajuda a Organizar Suas Contas em dia</h1>
+        <p></p>
+        <p></p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 bg-dark">
+                    <div class = "row">
+                        <div class="col-md-12 bg-warning">
+                            <img src= "{% static 'img/logo.jpg' %}" class="rounded float-left" alt="">
+                        </div>
+                        <div class= "col-md-12 bg-primary">
+                            <img src="{% static 'img/images.jpg' %}" class="rounded float-left mx-auto d-block" alt="">
+                        </div>
+                    </div>      
+                </div>
+                <div class="col-md-6 bg-info">
+                    <img src="{% static 'img/josecalcados.jpg' %}" class="rounded float-right" alt="">
+                </div>
+            </div>
+        </div>
+            
+            <h5 class="laranja">Não é falta de tempo que nos persegue, é a falta de organização.</h5>
+        
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
        
 <div class="container">
 
