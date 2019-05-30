@@ -1,0 +1,15 @@
+create or replace TRIGGER TG_HIST_BANNER
+BEFORE UPDATE ON BANNER
+FOR EACH ROW
+BEGIN
+    INSERT INTO HIST_BANNER (ID,NOME,DATA_CADASTRO,DATA_EXPIRACAO,STATUS_DLT,ID_RESP_FK,ID_BAN_FK,DATA_HORA)
+    SELECT  SQ_HIST_BANNER.nextval, 
+            NOME, 
+            DATA_CADASTRO, 
+            DATA_EXPIRACAO, 
+            STATUS_DLT, ID_RESP_FK,
+            ID,
+            to_char(sysdate,'dd/mm/yyyy hh24:mi:ss') AS DATA_HORA
+    FROM BANNER
+    WHERE ID = :OLD.ID;
+END;
