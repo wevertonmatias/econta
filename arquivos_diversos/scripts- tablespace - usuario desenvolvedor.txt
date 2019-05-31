@@ -32,6 +32,9 @@ ALTER USER "DESENVOLVEDOR" QUOTA UNLIMITED ON USERS;
 grant alter session to desenvolvedor;
 grant create trigger to desenvolvedor;
 
+
+grant create session to desenvolvedor;
+
 grant perfil_desenv to desenvolvedor;
 
 grant unlimited tablespace to desenvolvedor;
