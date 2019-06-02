@@ -1,5 +1,9 @@
 /* Criando as sequences de cada tabela para auxiliar na chave primaria */
 
+CREATE SEQUENCE SEQ
+MINVALUE 1
+INCREMENT BY 1;
+
 CREATE SEQUENCE SQ_CONTATO_MSG
 MINVALUE 1
 INCREMENT BY 1;
