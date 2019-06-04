@@ -53,56 +53,34 @@
     <div class="h2 text-center">
         <label>Nossos Parceiros</label>
     </div>
-    <div class="row">
-        
-        <div class="col-sm-3">   
-            <div class="card" >
-                <img src="img/josecalcados.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">José Calçados</h5>
-                <p class="card-text">Uma empresa que fornece os melhores calçados da região</p>
-                <a href="#" class="btn btn-primary">Visite o Site</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" >
-                <img src="" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" >
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-            
-        <div class="col-sm-3">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
+<div>
+    <div class="card-group">
+    <div class="card-1 bg-dark text-light mr-5" style="max-width: 18rem;">
+  <img src="{% static 'img/comida_chinesa.jpg'%}" class="card-img-top" alt="chinesa">
+  <div class="card-body">
+    <h5 class="card-title">Tofu Recheado</h5>
+    <p class="card-text"> Tofu Recheado, Irresístivel do começo ao fim!</p>
+    <a href="#" class="btn btn-primary">Go</a>
+  </div>
 </div>
-    
+    <div class="card-2 text-white bg-danger mr-5" style="max-width: 18rem;">
+  <img src="{% static 'img/comida_mexicana.jpg' %} " class="card-img-top" alt="mexicana">
+  <div class="card-body">
+    <h5 class="card-title">Chilli Beans</h5>
+    <p class="card-text">Chilli Beans, Alimentando por várias gerações</p>
+    <a href="#" class="btn btn-primary">Go </a>
+  </div>
+</div>
+    <div class="card-3 text-white bg-secondary mr-5" style="max-width: 18rem;">
+  <img src="{% static 'img/jo%C3%A3o_sapatos.jpg' %} " class="card-img-top" alt="joão">
+  <div class="card-body">
+    <h5 class="card-title">João Calçados</h5>
+    <p class="card-text">você escolhe: seguir a moda ou fazer a moda. Aposte no seu estilo</p>
+    <a href="#" class="btn btn-primary">Go </a>
+  </div>
+</div>
+    </div>
+
 <script type="script"  src="{% static 'js/jquery-3.4.1.min.js' %} "></script>
 <script type="script"  src="{% static 'js/bootstrap.min.js' %} "></script>
 <script type="script"  src="{% static 'js/ionicons.js' %} "></script>

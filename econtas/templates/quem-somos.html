@@ -1,95 +1,84 @@
 {% load static %}
 <!doctype html>
 <html lang="pt-br">
-    <head>
-        <title> pagina de exemplo estrutura basica </title>
-        <meta charset="utf-8">
+  <head>
+      <title>Quem Somos</title>
+      <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %} ">
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %} ">
-</head>
-
-<body>
-        
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <img id="minhalogo" src="{% static 'img/images.png'%} ">
-        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'index' %}">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="{% url 'quem_somos' %}">Quem Somos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'contato' %}">Contato</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'parceiro' %} ">Parceiros</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'acessar_conta'%}">Acessar Conta</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="facebook">
-                   <i class="fab fa-facebook-square"></i></a>
-            </li>
-        </ul>
-     
-    </div>
-    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-    </button>
-    </nav>
-
-
-</header>
-<!doctype html>
-<html lang="pt-br">
-    <head>
-        <title> pagina de exemplo estrutura basica </title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        
-    </head>
-    <body>
-        <h5 class="laranja">Quem Somos</h5>
-        <h1 class="laranja-pera">O e-Contas lhe Ajuda a Organizar Suas Contas em dia</h1>
-        <p></p>
-        <p></p>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 bg-dark">
-                    <div class = "row">
-                        <div class="col-md-12 bg-warning">
-                            <img src= "{% static 'img/logo.jpg' %}" class="rounded float-left" alt="">
-                        </div>
-                        <div class= "col-md-12 bg-primary">
-                            <img src="{% static 'img/images.jpg' %}" class="rounded float-left mx-auto d-block" alt="">
-                        </div>
-                    </div>      
+  </head>
+    {% include "common/header.html"%}
+  <body>
+    <div class="container" expander-lg>
+        <h1 class="text-center text-danger">Sobre o e-Contas</h1>
+        <h3>Para quem quer as despesas bem detalhadas completo para sua empresa com o e-Contas!</h3>
+        <div class="container my-5">
+            <img class="float-left" src="{% static 'img/desk-3139127_640.jpg' %}" class="col-md-5">
+        </div>
+        <div></div>
+        <p>O e-Contas é um sistema para gerenciamento de pagamentos totalmente online e integrado. Em um único ambiente você pode, controlar o fluxo financeiro de sua empresa, agendar seus compromissos, emitir boletos bancários. Confira os principais vantagens do e-Contas:</p>
+      
+        <p>Acesse de qualquer lugar: O sistema é totalmente online e compatível com tablets e smarthphones. Não é necessário instalar aplicativo adicional, basta utilizar o seu navegador favorito para acessar o sistema de seu celular, tablet ou computador.</p>
+        <p>Backup diário: Não se preocupe mais com perda de informações importantes de sua empresa, o e-Contas possui backup automático diário de seus dados. Além disso nossos servidores são monitorados 24h por dia, garantindo disponibilidade de 99,6%.</p>
+        <p>Seguro: Utilizamos a tecnologia SSL para criptografia das informações, a mesma utilizada pelos bancos. Além disso, você também pode definir quem pode acessar suas informações, podendo inclusive criar permissões de acesso diferenciadas para cada grupo de usuários.</p>
+        <p> Notificações por e-mail: Receba notificações de seus compromissos, contas a pagar e receber diariamente por e-mail.</p>
+     </div>
+      <div class="container">
+        <h3>Dúvidas Frequentes</h3>
+        <div class="accordion" id="cordao">
+            <div class="card">
+                <div class="card-header" id="um">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Como funciona o pagamento da mensalidade?
+                        </button>
+                    </h2>
                 </div>
-                <div class="col-md-6 bg-info">
-                    <img src="{% static 'img/josecalcados.jpg' %}" class="rounded float-right" alt="">
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="um" data-parent="#cordao">
+                    <div class="card-body">
+                        O pagamento da assinatura do sistema é no modo pré-pago, podendo ser pago mensal, trimestral, semestral ou anual por cartão de crédito ou boleto bancário.
+                    </div>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-header" id="dois">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Os meus dados estarão seguros no e-Contas?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="dois" data-parent="#cordao">
+                    <div class="card-body">
+                        Sim! Utilizamos a mesma tecnologia de criptografia utilizada pelos bancos (basta observar o     cadeado na barra de endereços no seu navegador), além disso efetuamos backup diariamente do banco de dados.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="três">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Qual a vantagem de utilizar um sistema online?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="três" data-parent="#cordao">
+                    <div class="card-body">
+                        Com um sistema online você não precisa se preocupar com infraestrutura (servidores), manutenção e backup dentro da sua empresa. Outra vantagem é a liberdade de poder acessar o sistema de qualquer lugar, podendo ser acessado de um computador, tablet ou smartphone. O único requisito é que o dispositivo tenha  uma conexão com a internet.
+                    </div>
+                </div>
+            </div>
+            <div class="border border-primary">
+            <fieldset>
+                Um cliente é o visitante mais importante em nossas instalações. Ele não depende de nós. Nós dependemos dele. Ele não é uma interrupção em nosso trabalho. É nosso objetivo. Não é um estranho no nosso negócio. É parte dele. Não lhe fazemos um favor ao servi-lo. Ele nos faz um favor ao nos dar uma oportunidade de servi-lo.
+            </fieldset>
+            </div>
         </div>
-            
-            <h5 class="laranja">Não é falta de tempo que nos persegue, é a falta de organização.</h5>
-        
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    </body>
+    </div>
+      
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
 </html>
-       
-<div class="container">
-
-</div>
-<script type="script"  src="{% static 'js/jquery-3.4.1.min.js' %} "></script>
-<script type="script"  src="{% static 'js/bootstrap.min.js' %} "></script>
-<script type="script"  src="{% static 'js/ionicons.js' %} "></script>
-</body>
-</html>  
