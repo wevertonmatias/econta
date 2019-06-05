@@ -5,17 +5,14 @@
     <head>
         <title> pagina de exemplo estrutura basica </title>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %} ">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %} ">
+        {% include 'common/link.html' %}
 </head>
 
 <body>
         
 <header>
     {% include 'common/header.html' %}
-
-
+    
 </header>
        
 <div class="container">
@@ -36,8 +33,6 @@
     </form>   
 
 </div>
-<script type="script"  src="{% static 'js/jquery-3.4.1.min.js' %} "></script>
-<script type="script"  src="{% static 'js/bootstrap.min.js' %} "></script>
-<script type="script"  src="{% static 'js/ionicons.js' %} "></script>
+{% include 'common/script.html' %}
 </body>
 </html>  

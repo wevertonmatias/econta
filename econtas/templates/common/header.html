@@ -1,24 +1,25 @@
 {% load static %}
+{% include 'common/script.html' %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <img style="max-width:100px; margin-top: -7px;" src=" {% static 'img/free_horizontal_on_white_by_logaster.png' %} " alt="logotipo">
         
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" href="{% url 'index' %}">Home</a>
+            <li  id="id-home" class="nav-item">
+                <a  class="nav-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <li id="quem_somos" class="nav-item">
+                <a  class="nav-link" href="{% url 'quem_somos' %}">Quem Somos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'quem_somos' %}">Quem Somos</a>
+                <a id="contato" class="nav-link" href="{% url 'contato' %}">Contato</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'contato' %}">Contato</a>
+                <a id="parceiros" class="nav-link" href="{% url 'parceiro' %} ">Parceiros</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'parceiro' %} ">Parceiros</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'acessar_conta'%}">Acessar Conta</a>
+                <a id="acessar_conta" class="nav-link" href="{% url 'acessar_conta'%}">Acessar Conta</a>
             </li>
                 <li class="nav-item">
                 <a class="nav-link" href="facebook">
@@ -32,4 +33,4 @@
             <span class="navbar-toggler-icon"></span>
     </button>
    
-    </nav>
+</nav>

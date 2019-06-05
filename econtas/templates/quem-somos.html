@@ -1,12 +1,10 @@
 {% load static %}
 <!doctype html>
 <html lang="pt-br">
-  <head>
-      <title>Quem Somos</title>
-      <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %} ">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %} ">
+    <head>
+        <title>Quem Somos</title>
+        <meta charset="utf-8">
+        {% include 'common/link.html'%}
   </head>
     {% include "common/header.html"%}
   <body>
@@ -78,7 +76,6 @@
         </div>
     </div>
       
-<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-  </body>
+    {% include 'common/script.html' %}
+    </body>
 </html>
