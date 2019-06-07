@@ -19,7 +19,7 @@ class Banner(models.Model):
 
 
 class Boleto(models.Model):
-    id = models.BigIntegerField(primary_key=True)
+    id = models.BigIntegerField(primary_key=True, null=False, blank=True)
     descricao = models.CharField(max_length=255)
     dt_vencimento = models.DateField()
     valor = models.DecimalField(max_digits=10, decimal_places=2)

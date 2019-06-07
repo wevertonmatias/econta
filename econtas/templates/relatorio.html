@@ -122,35 +122,17 @@
                         <td>1.110,00</td>
                     </tfoot>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Jose Calçados</td>
-                            <td>Equatorial Nº2540</td>
-                            <td>Energia</td>
-                            <td>01/02/2019</td>
-                            <td>03/02/2019</td>
-                            <td>850,00</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                                <td>Jose Calçados</td>
-                                <td>Fatura oi 8233254679</td>
-                                <td>Telefone</td>
-                                <td>10/02/2019</td>
-                                <td>16/02/2019</td>
-                                <td>180,00</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Jose Calçados</td>
-                            <td>Boleto Nº1212313</td>
-                            <td>Internet</td>
-                            <td>15/02/2019</td>
-                            <td>20/02/2019</td>
-                            <td>80,00</td>
-
-                        </tr>
-
+                        {% for boleto in boletos %}
+                            <tr>
+                                <th scope="row">{{ boleto.id }}</th>
+                                <td>{{ boleto.id_forn_fk }}</td>
+                                <td>{{ boleto.descricao }}</td>
+                                <td>{{ boleto.id_cate_fk }}</td>
+                                <td>{{ boleto.dt_vencimento }}</td>
+                                <td>Em Aberto</td>
+                                <td>{{ boleto.valor }}</td>
+                            </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
