@@ -73,18 +73,12 @@ WSGI_APPLICATION = 'projeto.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-
-
-
-#    'default': {
-#    'ENGINE': 'django.db.backends.oracle',
-#    'NAME': 'xe',
-#   'USER': 'system',
-#    'PASSWORD': '185723',
-#     'HOST': '',
-#    'PORT': '',
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'xe',
+        'USER': 'desenvolvedor',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+        'PORT': '1521',
     }
 }
 
