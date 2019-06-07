@@ -1,50 +1,53 @@
 {% load static %}
 <!doctype html>
 <html lang="pt-br">
-    <head>
-        <title> pagina de exemplo estrutura basica </title>
-        <meta charset="utf-8">
-        {% include 'common/link.html' %}
+
+<head>
+    <title> pagina de exemplo estrutura basica </title>
+    <meta charset="utf-8"> {% include 'common/link.html' %}
 </head>
 
 <body>
-        
-<header>
-    {% include 'common/header.html' %}
-</header>
-       
-<div class="container border">
-    <div class="h2 text-center">
-        <label>Nossos Parceiros</label>
-    </div>
-<div>
-    <div class="card-group">
-    <div class="card-1 bg-dark text-light mr-5" style="max-width: 18rem;">
-  <img src="{% static 'img/comida_chinesa.jpg'%}" class="card-img-top" alt="chinesa">
-  <div class="card-body">
-    <h5 class="card-title">Tofu Recheado</h5>
-    <p class="card-text"> Tofu Recheado, Irresístivel do começo ao fim!</p>
-    <a href="#" class="btn btn-primary">Go</a>
-  </div>
-</div>
-    <div class="card-2 text-white bg-danger mr-5" style="max-width: 18rem;">
-  <img src="{% static 'img/comida_mexicana.jpg' %} " class="card-img-top" alt="mexicana">
-  <div class="card-body">
-    <h5 class="card-title">Chilli Beans</h5>
-    <p class="card-text">Chilli Beans, Alimentando por várias gerações</p>
-    <a href="#" class="btn btn-primary">Go </a>
-  </div>
-</div>
-    <div class="card-3 text-white bg-secondary mr-5" style="max-width: 18rem;">
-  <img src="{% static 'img/jo%C3%A3o_sapatos.jpg' %} " class="card-img-top" alt="joão">
-  <div class="card-body">
-    <h5 class="card-title">João Calçados</h5>
-    <p class="card-text">você escolhe: seguir a moda ou fazer a moda. Aposte no seu estilo</p>
-    <a href="#" class="btn btn-primary">Go </a>
-  </div>
-</div>
+
+    <header>
+        {% include 'common/header.html' %}
+    </header>
+
+    <div class="container border">
+        <div class="h2 text-center">
+            <label>Nossos Parceiros</label>
+        </div>
+        <div class="container">
+            <div class="card-group">
+                <div class="card-1 bg-dark text-light m-2" style="max-width: 18rem;">
+                    <img src="{% static 'img/comida_chinesa.jpg'%}" class="card-img-top" alt="chinesa">
+                    <div class="card-body">
+                        <h5 class="card-title">Tofu Recheado</h5>
+                        <p class="card-text"> Tofu Recheado, Irresístivel do começo ao fim!</p>
+                        <a href="#" class="btn btn-primary">Go</a>
+                    </div>
+                </div>
+                <div class="card-2 text-white bg-danger m-2" style="max-width: 18rem;">
+                    <img src="{% static 'img/comida_mexicana.jpg' %} " class="card-img-top" alt="mexicana">
+                    <div class="card-body">
+                        <h5 class="card-title">Chilli Beans</h5>
+                        <p class="card-text">Chilli Beans, Alimentando por várias gerações</p>
+                        <a href="#" class="btn btn-primary">Go </a>
+                    </div>
+                </div>
+                <div class="card-3 text-white bg-secondary m-2" style="max-width: 18rem;">
+                    <img src="{% static 'img/jo%C3%A3o_sapatos.jpg' %} " class="card-img-top" alt="joão">
+                    <div class="card-body">
+                        <h5 class="card-title">João Calçados</h5>
+                        <p class="card-text">você escolhe: seguir a moda ou fazer a moda. Aposte no seu estilo</p>
+                        <a href="#" class="btn btn-primary">Go </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-{% include 'common/script.html' %}
+    {% include 'common/script.html' %}
 </body>
-</html>                                             
+
+</html>

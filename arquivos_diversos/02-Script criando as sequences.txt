@@ -1,4 +1,5 @@
 /* Criando as sequences de cada tabela para auxiliar na chave primaria */
+/* Usamos apenas a sequencia SEQ*/
 
 CREATE SEQUENCE SEQ
 MINVALUE 1
