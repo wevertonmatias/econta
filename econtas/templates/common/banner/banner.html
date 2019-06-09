@@ -10,8 +10,8 @@
 
         <div class="carousel-inner" role="listbox">
             {% for banner in banners %}
-            <div class="item {% if forloop.last %} active {% endif %}">
-                <img src="/media/{{ banner.foto }}">
+            <div class="item-fluid {% if forloop.last %} active {% endif %}">
+                <img class="img-fluid" src="/media/{{ banner.foto }}">
             </div>
             {% endfor %}
         </div>
